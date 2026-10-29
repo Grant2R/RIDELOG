@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My MTB Training Log</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+   <header>
+    <h1>RIDE LOG</h1>
+    
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#statistics">Statistics</a>
+        <a href="#history">History</a>
+        <a href="#log-ride">Log a Ride</a>
+    </nav>
+   </header>
+
+   <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>Track your riding progress at a glance.</p>
+        </section>
+        <section id="statistics">
+            <h2>Statistics</h2>
+            <p>View your riding statistics</p>
+        </section>
+        <section id="history">
+            <h2>History</h2>
+            <div id="ride-history">
+            </div>
+            <p>Past rides and training history.</p>
+        </section>
+        <section id="log-ride">
+            <h2>Log a Ride</h2>
+            <p>Record a new ride and update your training log.</p>
+            <form id="ride-form"> 
+                <div class="form-group">
+                <label for="trail">Trail name:</label>
+                <input type="text" id="trail" name="trail">
+                </div>
+                <div class="form-group">
+                    <label for="miles">Miles:</label>
+                    <input type="number" id="miles" name="miles" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="minutes">Minutes:</label>
+                    <input type="number" id="minutes" name="minutes" step="1">
+                </div>
+
+                <button type="submit">Save Ride</button>
+            </form>
+            <p id="ride-message"></p>
+        </section>
+   </main>
+   <script src="/static/script.js"></script>
+</body>
+</html>
